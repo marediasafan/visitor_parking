@@ -1,0 +1,7 @@
+# model generator commands
+
+rails g model User first_name:string{50} last_name:string{50} username:string{30}:uniq password email phone building:references
+
+rails g model Building code:integer:uniq registration_num:string{50} name:string{100} street city state postal_code country parking_spots:integer{11}
+
+rails g model Visitor apt_num:string{11} phone:string{20} license_plate:string{20} building:references
