@@ -4,7 +4,7 @@ This application will allow guest to register for a visitor parking.
 
 Requirements:
 
-* Ruby On Rails (Ruby >= 2.5) & ()Rails >= 5.2)
+* Ruby On Rails (Ruby >= 2.5) & (Rails >= 5.2)
 * Database: MySQL
 
 Pages:
