@@ -1,2 +1,42 @@
-<h1>Building#index</h1>
-<p>Find me in app/views/building/index.html.erb</p>
+<h1>List of Buildings Registered</h1>
+
+<h3><%= link_to 'Register Building', building_new_path  %></h3>
+
+<table cellpadding="10" cellspacing="20" border="1">
+  <tr>
+    <th>ID</th>
+    <th>Code</th>
+    <th>Registration #</th>
+    <th>Name</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal Code</th>
+    <th>Country</th>
+    <th># of parking spots</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Action</th>
+  </tr>
+
+  <% @buildings.each do |building| %>
+    <tr>
+      <td><%= building.id %></td>
+      <td><%= building.code %></td>
+      <td><%= building.registration_num %></td>
+      <td><%= building.name %></td>
+      <td><%= building.street %></td>
+      <td><%= building.city %></td>
+      <td><%= building.state %></td>
+      <td><%= building.postal_code %></td>
+      <td><%= building.country %></td>
+      <td><%= building.parking_spots %></td>
+      <td><%= building.created_at %></td>
+      <td><%= building.updated_at %></td>
+      <td>
+        <%= link_to 'Show', building_path(building) %> |
+        <%= link_to 'Delete', building_path(building) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
