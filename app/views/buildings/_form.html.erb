@@ -21,13 +21,50 @@
 
   <p>
     <%= form.label :registration_num %><br>
-    <%= form.text_area :registration_num %>
+    <%= form.text_field :registration_num %>
   </p>
 
   <p>
     <%= form.label :name %><br>
-    <%= form.text_area :name %>
+    <%= form.text_field :name %>
   </p>
+
+  <p>
+    <%= form.label :parking_spots %><br>
+    <%= form.text_field :parking_spots %>
+  </p>
+
+  <h3>Address:</h3>
+
+  <p>
+    <%= form.label :street %><br>
+    <%= form.text_field :street %>
+  </p>
+
+
+  <p>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
+  </p>
+
+
+  <p>
+    <%= form.label :state %><br>
+    <%= form.text_field :state %>
+  </p>
+
+  <p>
+    <%= form.label :postal_code %><br>
+    <%= form.text_field :postal_code %>
+  </p>
+
+
+  <p>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+  </p>
+
+
 
   <p>
     <%= form.submit %>

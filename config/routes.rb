@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
-  get 'building/new'
-  get 'building/update'
-  get 'building/create'
-  get 'building/edit'
+  get 'buildings/show'
+  get 'buildings/new'
+  get 'buildings/update'
+  get 'buildings/create'
+  get 'buildings/edit'
+  get 'buildings/delete'
   get 'visitor/index'
-  get 'building/index'
+  get 'buildings/index'
   get 'user/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root 'user#index'
 
-  resources :building
+  resources :buildings
+  resources :user
+  resources :visitor
 end

@@ -1,8 +1,8 @@
 <h1>List of Buildings Registered</h1>
 
-<h3><%= link_to 'Register Building', building_new_path  %></h3>
+<h3><%= link_to 'Register Building', buildings_new_path  %></h3>
 
-<table cellpadding="10" cellspacing="20" border="1">
+<table cellpadding="10" cellspacing="5" border="1">
   <tr>
     <th>ID</th>
     <th>Code</th>
@@ -35,7 +35,11 @@
       <td><%= building.updated_at %></td>
       <td>
         <%= link_to 'Show', building_path(building) %> |
-        <%= link_to 'Delete', building_path(building) %>
+        <%= link_to 'Edit', edit_building_path(building) %> |
+        <%= link_to 'Delete', building_path(building),
+            method: :delete,
+            data: {confirm: 'Are you sure you want to delete building - ' + building.name + '?'}
+        %>
       </td>
     </tr>
   <% end %>
