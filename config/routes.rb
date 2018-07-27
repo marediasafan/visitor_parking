@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'visitor/register'
+  get 'visitor/reports'
+  get 'visitor/settings'
   get 'buildings/show'
   get 'buildings/new'
   get 'buildings/update'
