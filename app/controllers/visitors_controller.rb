@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   def index
-    # @visitors = Visitor.all
+    @visitors = Visitor.all
   end
 
   def new
@@ -17,7 +17,7 @@ class VisitorsController < ApplicationController
     if visitor.save
       redirect_to @visitor
     else
-      render 'register'
+      render 'new'
     end
   end
 
