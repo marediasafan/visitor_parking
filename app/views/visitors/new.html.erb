@@ -1,0 +1,9 @@
+<h3>Register your vehicle</h3>
+
+<%#= form_for @visitor, :url => { :action => "create" }, local: true do |form| %>
+<%= form_with model: @visitor, local: true do |form| %>
+  <p>
+    <%= form.label :apt_num %><br>
+    <%= form.text_field :apt_num %>
+  </p>
+<% end %>
