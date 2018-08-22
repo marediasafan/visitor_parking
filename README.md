@@ -1,6 +1,6 @@
 # Visitor Parking Registration
 
-This application will allow guest to register for a visitor parking.
+This application will allow guest to register vehicle for a visitor parking.
 
 Requirements:
 
