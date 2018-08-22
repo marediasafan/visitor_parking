@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_12_194546) do
+ActiveRecord::Schema.define(version: 2018_08_22_155142) do
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "code", null: false
@@ -28,17 +28,13 @@ ActiveRecord::Schema.define(version: 2018_07_12_194546) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name", limit: 50, null: false
-    t.string "last_name", limit: 50, null: false
-    t.string "username", limit: 30, null: false
+    t.string "first_name"
+    t.string "username"
     t.string "password"
-    t.string "email", limit: 100
-    t.string "phone", limit: 20
-    t.bigint "building_id"
+    t.string "email"
+    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["building_id"], name: "index_users_on_building_id"
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   create_table "visitors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -51,6 +47,5 @@ ActiveRecord::Schema.define(version: 2018_07_12_194546) do
     t.index ["building_id"], name: "index_visitors_on_building_id"
   end
 
-  add_foreign_key "users", "buildings"
   add_foreign_key "visitors", "buildings"
 end

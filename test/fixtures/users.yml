@@ -2,18 +2,16 @@
 
 one:
   first_name: MyString
-  last_name: MyString
+  first_name: MyString
   username: MyString
   password: MyString
   email: MyString
   phone: MyString
-  building: one
 
 two:
   first_name: MyString
-  last_name: MyString
+  first_name: MyString
   username: MyString
   password: MyString
   email: MyString
   phone: MyString
-  building: two
