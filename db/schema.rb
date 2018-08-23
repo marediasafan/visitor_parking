@@ -27,16 +27,6 @@ ActiveRecord::Schema.define(version: 2018_08_22_155142) do
     t.index ["code"], name: "index_buildings_on_code", unique: true
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name"
-    t.string "username"
-    t.string "password"
-    t.string "email"
-    t.string "phone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "visitors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "apt_num", limit: 11
     t.string "phone", limit: 20

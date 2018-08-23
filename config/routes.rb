@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'visitor/reports'
   get 'visitor/settings'
 
-  root 'users#index'
+  root 'visitors#index'
 
   resources :visitors
   resources :buildings
