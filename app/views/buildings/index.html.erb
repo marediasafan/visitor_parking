@@ -1,46 +1,48 @@
-<h1>List of Buildings Registered</h1>
+<h2>List of Buildings Registered <%= link_to 'Register Building', new_building_path, class: "btn btn-primary"  %></h2>
 
-<h3><%= link_to 'Register Building', new_building_path  %></h3>
-
-<table cellpadding="10" cellspacing="5" border="1">
-  <tr>
-    <th>ID</th>
-    <th>Code</th>
-    <th>Registration #</th>
-    <th>Name</th>
-    <th>Street</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Postal Code</th>
-    <th>Country</th>
-    <th># of parking spots</th>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th>Action</th>
-  </tr>
-
-  <% @buildings.each do |building| %>
+<table class="table table-striped">
+  <thead>
     <tr>
-      <td><%= building.id %></td>
-      <td><%= building.code %></td>
-      <td><%= building.registration_num %></td>
-      <td><%= building.name %></td>
-      <td><%= building.street %></td>
-      <td><%= building.city %></td>
-      <td><%= building.state %></td>
-      <td><%= building.postal_code %></td>
-      <td><%= building.country %></td>
-      <td><%= building.parking_spots %></td>
-      <td><%= building.created_at %></td>
-      <td><%= building.updated_at %></td>
-      <td>
-        <%= link_to 'Show', building_path(building) %> |
-        <%= link_to 'Edit', edit_building_path(building) %> |
-        <%= link_to 'Delete', building_path(building),
-            method: :delete,
-            data: {confirm: 'Are you sure you want to delete building - ' + building.name + '?'}
-        %>
-      </td>
+      <th scope="col">ID</th>
+      <th scope="col">Code</th>
+      <th scope="col">Registration #</th>
+      <th scope="col">Name</th>
+      <th scope="col">Street</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Postal Code</th>
+      <th scope="col">Country</th>
+      <th scope="col"># of parking spots</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+      <th scope="col">Action</th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @buildings.each do |building| %>
+      <tr>
+        <td scope="row"><%= building.id %></td>
+        <td scope="row"><%= building.code %></td>
+        <td scope="row"><%= building.registration_num %></td>
+        <td scope="row"><%= building.name %></td>
+        <td scope="row"><%= building.street %></td>
+        <td scope="row"><%= building.city %></td>
+        <td scope="row"><%= building.state %></td>
+        <td scope="row"><%= building.postal_code %></td>
+        <td scope="row"><%= building.country %></td>
+        <td scope="row"><%= building.parking_spots %></td>
+        <td scope="row"><%= building.created_at %></td>
+        <td scope="row"><%= building.updated_at %></td>
+        <td scope="row">
+          <%= link_to 'Show', building_path(building), class: "btn btn-info" %>
+          <%= link_to 'Edit', edit_building_path(building), class: "btn btn-success" %>
+          <%= link_to 'Delete', building_path(building), class: "btn btn-danger",
+              method: :delete,
+              data: {confirm: 'Are you sure you want to delete building - ' + building.name + '?'}
+          %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>

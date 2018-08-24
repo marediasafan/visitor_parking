@@ -1,45 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    li {
-      float: left;
-      color: white;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
-
-    .active {
-      background-color: #4CAF50;
-    }
-  </style>
-</head>
-<body>
-
-<ul>
-  <li><%= link_to 'Home', users_path %></li>
-  <li><%= link_to 'Buildings', buildings_path %></li>
-  <li><%= link_to 'Visitor', visitors_path %></li>
-  <li style="float:right"><%= link_to 'Admin', users_path, :class => 'active' %></li>
-</ul>
-
-</body>
-</html>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to 'Home', users_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Buildings', buildings_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Visitor', visitors_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Admin', users_path, :class => 'nav-link' %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

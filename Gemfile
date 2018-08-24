@@ -28,7 +28,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'react-rails'
 
 # Bootstrap
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.1.3'
+gem 'sprockets-rails'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
