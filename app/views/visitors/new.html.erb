@@ -3,8 +3,8 @@
 <%#= form_for @visitor, :url => { :action => "create" }, local: true do |form| %>
 <%= form_with model: @visitor, local: true do |form| %>
   <p>
-    <%= form.label :building, 'Enter Location ID:' %><br>
-    <%= form.text_field :building %>
+    <%= form.label :building_id, 'Enter Location ID:' %><br>
+    <%= form.text_field :building_id %>
   </p>
 
   <p>

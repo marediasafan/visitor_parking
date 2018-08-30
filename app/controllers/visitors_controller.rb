@@ -14,7 +14,7 @@ class VisitorsController < ApplicationController
   def create
     @visitor = Visitor.new(visitor_params)
 
-    if visitor.save
+    if @visitor.save
       redirect_to @visitor
     else
       render 'new'
@@ -23,6 +23,6 @@ class VisitorsController < ApplicationController
 
   private
   def visitor_params
-    params.require(:visitor).permit(:apt_num, :phone, :license_plate, :building)
+    params.require(:visitor).permit(:apt_num, :phone, :license_plate, :building_id)
   end
 end
