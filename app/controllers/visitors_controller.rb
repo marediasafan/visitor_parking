@@ -11,6 +11,10 @@ class VisitorsController < ApplicationController
     @visitor = Visitor.find(params[:id])
   end
 
+  def edit
+    @visitor = Visitor.find(params[:id])
+  end
+
   def create
     @visitor = Visitor.new(visitor_params)
 

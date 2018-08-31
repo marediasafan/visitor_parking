@@ -1,4 +1,31 @@
-<h3>Parking Registration</h3>
+<h2>Parking Registration <div class="col text-right"><%= link_to 'New Registration', new_visitor_path, class: "btn btn-primary" %></div></h2>
 
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Building ID</th>
+    <th scope="col">Apt # </th>
+    <th scope="col">License Plate</th>
+    <th scope="col">Phone</th>
+    <th scope="col">Registered At</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
 
-<%= link_to 'New Registration', new_visitor_path %>
+  <tbody>
+  <% @visitors.each do |visitor| %>
+    <tr>
+      <td scope="row"><%= visitor.building_id %></td>
+      <td scope="row"><%= visitor.apt_num %></td>
+      <td scope="row"><%= visitor.license_plate %></td>
+      <td scope="row"><%= visitor.phone %></td>
+      <td scope="row"><%= visitor.created_at %></td>
+      <td scope="row">
+        <%= link_to 'Show', visitor, class: "btn btn-info" %>
+        <%= link_to 'Edit', edit_visitor_path(visitor), class: "btn btn-success" %>
+        <%#= link_to 'Destroy', visitor, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

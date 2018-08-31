@@ -1,0 +1,28 @@
+<%= form_with model: @visitor, local: true do |form| %>
+  <p>
+    <%= form.label :building_id, 'Enter Location ID:' %><br>
+    <%= form.text_field :building_id %>
+  </p>
+
+  <p>
+    <%= form.label :apt_num, 'Enter Unit/Apt Number:' %><br>
+    <%= form.text_field :apt_num %>
+  </p>
+
+  <p>
+    <%= form.label :phone, 'Enter Phone Number:' %><br>
+    <%= form.text_field :phone %>
+  </p>
+
+  <p>
+    <%= form.label :license_plate, 'Enter vehicle License Plate:' %><br>
+    <%= form.text_field :license_plate %>
+  </p>
+
+
+  <p>
+    <%= form.submit :value=>'Register', class: "btn btn-success" %>
+
+    <%= link_to 'Back', visitors_path, class: "btn btn-dark" %>
+  </p>
+<% end %>

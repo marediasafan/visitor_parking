@@ -1,32 +1,37 @@
-<h1>Viewing - <%= @building.name %></h1>
-<p>
-  <strong>Code:</strong>
-  <%= @building.code %>
-</p>
+<div class="row">
+  <div class="col text-center">
+    <h1>Viewing - <%= @building.name %></h1>
+    <p>
+      <strong>Code:</strong>
+      <%= @building.code %>
+    </p>
 
-<p>
-  <strong>Registration #:</strong>
-  <%= @building.registration_num %>
-</p>
+    <p>
+      <strong>Registration #:</strong>
+      <%= @building.registration_num %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @building.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @building.name %>
+    </p>
 
-<p>
-  <strong># of Parking Spots:</strong>
-  <%= @building.parking_spots %>
-</p>
+    <p>
+      <strong># of Parking Spots:</strong>
+      <%= @building.parking_spots %>
+    </p>
 
-<h4>Address: </h4>
-<p>
-  <%= @building.street %><br/>
-  <%= @building.city + ", " + @building.state %><br/>
-  <%= @building.postal_code + ", " + @building.country %><br/>
-</p>
+    <h4>Address: </h4>
+    <p>
+      <%= @building.street %><br/>
+      <%= @building.city + ", " + @building.state %><br/>
+      <%= @building.postal_code + ", " + @building.country %><br/>
+    </p>
 
 
 
-<%= link_to 'Edit', edit_building_path(@building) %> |
-<%= link_to 'Back', buildings_path %>
+    <%= link_to 'Edit', edit_building_path(@building), class: "btn btn-success"  %>
+    <%= link_to 'Back', buildings_path, class: "btn btn-dark"  %>
+
+  </div>
+</div>

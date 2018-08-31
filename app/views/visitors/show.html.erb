@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col text-center">
+    <p id="notice"><%= notice %></p>
+
+    <h3>Confirmation of registration</h3>
+
+    <p>
+      <strong>License Plate:</strong>
+      <%= @visitor.license_plate %>
+    </p>
+
+    <p>
+      <strong>Apt #:</strong>
+      <%= @visitor.apt_num %>
+    </p>
+
+    <p>
+      <strong>Building ID:</strong>
+      <%= @visitor.building_id %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <%= @visitor.phone %>
+    </p>
+
+    <p>
+      <strong>Date Registered:</strong>
+      <%= @visitor.created_at %>
+    </p>
+
+    <%= link_to 'Edit', edit_visitor_path(@visitor), class: "btn btn-success" %>
+    <%= link_to 'Back', visitors_path, class: "btn btn-dark" %>
+  </div>
+</div>

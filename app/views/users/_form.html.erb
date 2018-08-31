@@ -11,37 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
+  <p>
+    <%= form.label :first_name, 'First Name:' %>
     <%= form.text_field :first_name %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= form.label :last_name %>
     <%= form.text_field :last_name %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= form.label :username %>
     <%= form.text_field :username %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= form.label :password %>
     <%= form.text_field :password %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= form.label :email %>
     <%= form.text_field :email %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= form.label :phone %>
     <%= form.text_field :phone %>
-  </div>
+  </p>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <p>
+    <%= form.submit :value=>'Register', class: "btn btn-success" %>
+
+    <%= link_to 'Back', users_path, class: "btn btn-dark" %>
+  </p>
 <% end %>
