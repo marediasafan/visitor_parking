@@ -1,6 +1,6 @@
-# Visitor Parking Registration
+# Visitor Parking Registration (in development)
 
-This application will allow guest to register vehicle for a visitor parking.
+This application will allow guest to register vehicle for a visitor parking, replacing manual way of getting ticket from security person.
 
 Requirements:
 
@@ -17,3 +17,8 @@ Pages:
 
 * Parking Space available - live stats on spots free based on active registration 
  
+Screenshots:
+
+![alt 'Register Building'](https://preview.ibb.co/fZwoN9/Building_registration.png)
+
+![alt 'Register Visitor Vehicle'](https://preview.ibb.co/jh3JN9/Visitor_Registration.png)
