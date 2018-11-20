@@ -25,6 +25,10 @@ class VisitorsController < ApplicationController
     end
   end
 
+  def subscribe
+
+  end
+
   private
   def visitor_params
     params.require(:visitor).permit(:apt_num, :phone, :license_plate, :building_id)
