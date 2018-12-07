@@ -16,6 +16,8 @@ class VisitorsController < ApplicationController
   end
 
   def create
+    # check if visitor exceeded the limits
+
     @visitor = Visitor.new(visitor_params)
 
     if @visitor.save
